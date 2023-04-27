@@ -13,7 +13,6 @@ contract SocialNetwork {
     Post[] public posts;
     
     function createUser(string memory username) public {
-        require(bytes(users[msg.sender]).length == 0, 'User already exists');
         users[msg.sender] = username;
     }
     
